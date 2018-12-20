@@ -5,6 +5,7 @@ public class MazeLoader : MonoBehaviour {
 	public int mazeRows, mazeColumns;
 	public GameObject wall;
     public GameObject floor;
+    public GameObject player;
 	public float size = 2f; // Size of row or column
 
 	private MazeCell[,] mazeCells;
@@ -16,6 +17,8 @@ public class MazeLoader : MonoBehaviour {
 
 		MazeAlgorithm ma = new HuntAndKillMazeAlgorithm (mazeCells);
 		ma.CreateMaze ();
+
+        SpawnPlayer();
 	}
 
 
@@ -52,4 +55,9 @@ public class MazeLoader : MonoBehaviour {
 			}
 		}
 	}
+
+    private void SpawnPlayer()
+    {
+        GameObject myplayer = Instantiate(player, new Vector3(0, 3, 0), Quaternion.identity);
+    }
 }

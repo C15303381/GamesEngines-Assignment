@@ -184,7 +184,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1943345806}
-  - component: {fileID: 1943345805}
+  - component: {fileID: 1943345807}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -206,26 +206,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1943345805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1943345804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c266f4a1060540bdbe4218ebd33fd13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  columns: 100
-  rows: 100
-  floorTiles:
-  - {fileID: 1596402571652192, guid: 0af9b75707b9840019cb9dc4da8decc6, type: 2}
-  wallTiles:
-  - {fileID: 1670917122522216, guid: 9dc7cd6975a1241e9882a37ed8fe5846, type: 2}
-  outerWallTiles:
-  - {fileID: 1330362225681494, guid: c1ac5bfb6cae74e658bb7b0beb5da83b, type: 2}
-  player: {fileID: 1374738274879172, guid: 60d57e73817c94f758a3e31c4eb5ecb3, type: 2}
 --- !u!4 &1943345806
 Transform:
   m_ObjectHideFlags: 0
@@ -239,3 +219,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1943345807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1943345804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334ef5519144d0e438a932a03abdacc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeRows: 20
+  mazeColumns: 20
+  wall: {fileID: 101274, guid: 2a571ace6952b154ca2ff06b0540f264, type: 2}
+  floor: {fileID: 1148216623143970, guid: 29aa027fdcbf445d39c0e1fb3a570cfa, type: 2}
+  player: {fileID: 1194500763178284, guid: 54c39ea55b7c742339fceb532a560da5, type: 2}
+  size: 5

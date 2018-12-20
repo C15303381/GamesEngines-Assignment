@@ -21,27 +21,26 @@ public class TankController : MonoBehaviour {
         transform.Rotate(0, x, 0);
         transform.Translate(0, 0, z);
 
-        /*
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Fire();
-        }
-        */
+
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    Fire();
+        //}
 	}
-    /*
-    void Fire()
-    {
-        var bullet = (GameObject)Instantiate 
-        (
-            bulletPrefab,
-            bulletSpawn.position,
-            bulletSpawn.rotation
-        );
 
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 10;
 
-        Destroy(bullet, 5.0f);
-    }
-    */
+    //void Fire()
+    //{
+    //    var bullet = (GameObject)Instantiate 
+    //    (
+    //        bulletPrefab,
+    //        bulletSpawn.position,
+    //        bulletSpawn.rotation
+    //    );
+    //
+    //    bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 10;
+    //
+    //    Destroy(bullet, 5.0f);
+    //}
     
 }
