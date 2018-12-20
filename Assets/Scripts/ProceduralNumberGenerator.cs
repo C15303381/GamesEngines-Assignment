@@ -1,12 +1,32 @@
 ﻿using UnityEngine;
-using System.Collections;
+using Random = System.Random;
 
-public class ProceduralNumberGenerator {
-	public static int currentPosition = 0;
-	public const string key = "123424123342421432233144441212334432121223344";
+public class ProceduralNumberGenerator { 
+    public static int GetNextNumber() {
+	
+        Random r = new Random();
+        int rInt = r.Next(0, 5);
+        Debug.Log(rInt);
 
-	public static int GetNextNumber() {
-		string currentNum = key.Substring(currentPosition++ % key.Length, 1);
-		return int.Parse (currentNum);
-	}
+        return rInt;
+    }
+
+    public static int GetXPosition(int width)
+    {
+        Random r = new Random();
+        int x = r.Next(width);
+        Debug.Log(x);
+
+        return x;
+    }
+
+    public static int GetZPosition(int width)
+    {
+        Random r = new Random();
+        int z = r.Next(width);
+        Debug.Log(z);
+
+        return z;
+    }
+
 }

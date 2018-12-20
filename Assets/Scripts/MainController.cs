@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankController : MonoBehaviour {
+public class MainController : MonoBehaviour {
 
     private Rigidbody rb;
     //public GameObject bulletPrefab;

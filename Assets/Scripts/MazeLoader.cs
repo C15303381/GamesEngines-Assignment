@@ -6,6 +6,7 @@ public class MazeLoader : MonoBehaviour {
 	public GameObject wall;
     public GameObject floor;
     public GameObject player;
+    public GameObject EndPoint;
 	public float size = 2f; // Size of row or column
 
 	private MazeCell[,] mazeCells;
@@ -19,6 +20,7 @@ public class MazeLoader : MonoBehaviour {
 		ma.CreateMaze ();
 
         SpawnPlayer();
+        SpawnEndPoint();
 	}
 
 
@@ -58,6 +60,15 @@ public class MazeLoader : MonoBehaviour {
 
     private void SpawnPlayer()
     {
-        GameObject myplayer = Instantiate(player, new Vector3(0, 3, 0), Quaternion.identity);
+        GameObject myplayer = Instantiate(player, new Vector3(0, 2, 0), Quaternion.identity) as GameObject;
+    }
+
+    private void SpawnEndPoint()
+    {
+        int x = ProceduralNumberGenerator.GetXPosition(mazeRows);
+        int z = ProceduralNumberGenerator.GetZPosition(mazeColumns);
+
+        GameObject End = Instantiate(EndPoint, new Vector3(x, 2, z), Quaternion.identity);
+
     }
 }
