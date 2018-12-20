@@ -19,14 +19,13 @@ public class GridDestroyMazeAlgorithm : MazeAlgorithm {
 		mazeCells [currentRow, currentColumn].visited = true;
 
 		while (! courseComplete) {
-			DestroyGrid(); // Will run until it hits a dead end.
-			Search(); // Finds the next unvisited cell with an adjacent visited cell. If it can't find any, it sets courseComplete to true.
+			DestroyGrid(); 
+			Search(); 
 		}
 	}
 
 	private void DestroyGrid() {
 		while (RouteStillAvailable (currentRow, currentColumn)) {
-			// int direction = Random.Range (1, 5);
 			int direction = ProceduralNumberGenerator.GetNextNumber ();
 
 			if (direction == 1 && CellIsAvailable (currentRow - 1, currentColumn)) {
@@ -52,17 +51,17 @@ public class GridDestroyMazeAlgorithm : MazeAlgorithm {
 	}
 
 	private void Search() {
-		courseComplete = true; // Set it to this, and see if we can prove otherwise below!
+		courseComplete = true; 
 
 		for (int r = 0; r < mazeRows; r++) {
 			for (int c = 0; c < mazeColumns; c++) {
 				if (!mazeCells [r, c].visited && CellHasAnAdjacentVisitedCell(r,c)) {
-					courseComplete = false; // Yep, we found something so definitely do another Kill cycle.
+					courseComplete = false; 
 					currentRow = r;
 					currentColumn = c;
 					DestroyAdjacentWall (currentRow, currentColumn);
 					mazeCells [currentRow, currentColumn].visited = true;
-					return; // Exit the function
+					return; 
 				}
 			}
 		}
@@ -136,7 +135,6 @@ public class GridDestroyMazeAlgorithm : MazeAlgorithm {
 		bool wallDestroyed = false;
 
 		while (!wallDestroyed) {
-			// int direction = Random.Range (1, 5);
 			int direction = ProceduralNumberGenerator.GetNextNumber ();
 
 			if (direction == 1 && row > 0 && mazeCells [row - 1, column].visited) {

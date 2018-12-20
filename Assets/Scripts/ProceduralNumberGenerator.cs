@@ -10,7 +10,7 @@ public class ProceduralNumberGenerator {
 
         return rInt;
     }
-
+    /*
     public static int GetXPosition(int width)
     {
         Random r = new Random();
@@ -28,5 +28,5 @@ public class ProceduralNumberGenerator {
 
         return z;
     }
-
+    */
 }
