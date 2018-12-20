@@ -68,7 +68,7 @@ public class MazeLoader : MonoBehaviour {
         //int x = ProceduralNumberGenerator.GetXPosition(mazeRows);
         //int z = ProceduralNumberGenerator.GetZPosition(mazeColumns);
 
-        GameObject End = Instantiate(EndPoint, new Vector3(95, 2, 95), Quaternion.identity);
+        GameObject End = Instantiate(EndPoint, new Vector3(mazeRows*size, 2, mazeColumns*size), Quaternion.identity);
 
     }
 }
