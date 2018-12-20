@@ -61,6 +61,11 @@ public class MazeLoader : MonoBehaviour {
     private void SpawnPlayer()
     {
         GameObject myplayer = Instantiate(player, new Vector3(0, 2, 0), Quaternion.identity) as GameObject;
+        GameObject cam = GameObject.FindGameObjectWithTag("MainCamera");
+        cam.transform.parent = myplayer.transform;
+        cam.transform.localPosition = new Vector3(0,3f,-3f);
+        cam.transform.Rotate(15, 0, 0);
+
     }
 
     private void SpawnEndPoint()
