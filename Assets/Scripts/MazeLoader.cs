@@ -16,7 +16,7 @@ public class MazeLoader : MonoBehaviour {
         // Called to creat maze grid
 		InitializeMaze ();
 
-		MazeAlgorithm ma = new HuntAndKillMazeAlgorithm (mazeCells);
+		MazeAlgorithm ma = new GridDestroyMazeAlgorithm (mazeCells);
 		ma.CreateMaze ();
 
         SpawnPlayer();
@@ -65,10 +65,10 @@ public class MazeLoader : MonoBehaviour {
 
     private void SpawnEndPoint()
     {
-        int x = ProceduralNumberGenerator.GetXPosition(mazeRows);
-        int z = ProceduralNumberGenerator.GetZPosition(mazeColumns);
+        //int x = ProceduralNumberGenerator.GetXPosition(mazeRows);
+        //int z = ProceduralNumberGenerator.GetZPosition(mazeColumns);
 
-        GameObject End = Instantiate(EndPoint, new Vector3(x, 2, z), Quaternion.identity);
+        GameObject End = Instantiate(EndPoint, new Vector3(95, 2, 95), Quaternion.identity);
 
     }
 }

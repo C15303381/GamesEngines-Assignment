@@ -64,12 +64,13 @@
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
-    <Compile Include="Assets\Scripts\HuntAndKillMazeAlgorithm.cs" />
+    <Compile Include="Assets\Scripts\GridDestroyMazeAlgorithm.cs" />
     <Compile Include="Assets\Scripts\MainController.cs" />
     <Compile Include="Assets\Scripts\MazeAlgorithm.cs" />
     <Compile Include="Assets\Scripts\MazeCell.cs" />
     <Compile Include="Assets\Scripts\MazeLoader.cs" />
     <Compile Include="Assets\Scripts\ProceduralNumberGenerator.cs" />
+    <Compile Include="Assets\Scripts\WinnerWinner.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/helen/GameEngines-Assignment/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
